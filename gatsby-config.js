@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: "gatsby portfolio",
@@ -6,8 +10,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "WqkTE2xCxaQaQus6RrSUk94XPowN-JCo4-390vRedYE",
-        spaceId: "bfze6yvvi56r",
+        spaceId: `bfze6yvvi56r`,
+        accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API,
       },
     },
     "gatsby-plugin-sass",
