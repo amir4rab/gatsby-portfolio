@@ -1,12 +1,15 @@
-import * as React from "react"
+import * as React from "react";
+import Home from "../components/home/home.component";
+import WnLayout from "../layout/wnLayout";
+
 
 
 const IndexPage = () => {
   return (
-    <div>
-      hello world!
-    </div>
-  )
-}
+    <WnLayout>
+      <Home />
+    </WnLayout>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
