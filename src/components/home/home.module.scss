@@ -58,8 +58,12 @@
         }
         .right{
             height: 100%;
+            flex-grow: 1;
             min-width: 50%;
-
+            
+            .highlightedProjects{
+                height: 100%;
+            }
         }
     }
 }

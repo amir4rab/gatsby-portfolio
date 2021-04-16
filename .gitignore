@@ -1,6 +1,4 @@
 node_modules/
 .cache/
-public/icons
-public/page-data
-public/static
+public
 .env.development

@@ -7,13 +7,13 @@ module.exports = {
     title: "gatsby portfolio",
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-source-contentful",
-    //   options: {
-    //     spaceId: `bfze6yvvi56r`,
-    //     accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: `bfze6yvvi56r`,
+        accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API,
+      },
+    },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     {
@@ -32,6 +32,5 @@ module.exports = {
       },
       __key: "images",
     },
-    `gatsby-plugin-netlify-cms`
   ],
 };

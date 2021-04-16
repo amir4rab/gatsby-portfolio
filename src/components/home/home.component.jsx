@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import ThumbnailImageSlider from '../thumbnailImageSlider/thumbnailImageSlider.component';
 import * as classes from './home.module.scss';
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
                 </div>
                 <div className={ classes.right }>
                     <div className={ classes.highlightedProjects }>
-                        highlighted
+                        <ThumbnailImageSlider />
                     </div>
                 </div>
             </section>
