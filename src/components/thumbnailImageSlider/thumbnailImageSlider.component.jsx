@@ -36,7 +36,10 @@ const ThumbnailImageSlider = () => {
                     changeActiveIndexTo={ setActiveIndex }
                 />
             </div>
-            <ImgSliderSlider imagesDataArr={queryRes.allContentfulProject.edges} />
+            <ImgSliderSlider
+                imagesDataArr={queryRes.allContentfulProject.edges}
+                activeIndex={ activeIndex }
+            />
         </div>
     );
 };
