@@ -8,7 +8,7 @@ const ImgSliderSlider = ({ imagesDataArr, activeIndex }) => {
     
     useEffect( _ => {
         setInnerStyle(`translate(${ -25 * activeIndex }vh)`);
-    },[ setInnerStyle, activeIndex ])
+    },[ setInnerStyle, activeIndex ]);
 
     return (
         <div>

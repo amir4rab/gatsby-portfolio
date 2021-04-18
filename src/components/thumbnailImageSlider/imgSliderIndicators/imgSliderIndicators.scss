@@ -1,12 +1,20 @@
+@import '../../../scss/styles';
+
 .imgSliderIndicators{
     margin-right: 1rem;
+
+    
+
     .indicator{
-        background: white;
+        background: $white-0;
+        border: none;
         width: .75rem;
         height: .75rem;
         border-radius: 50%;
         opacity: .5;
         transition: opacity .1s ease-in-out;
+        display: block;
+        outline: none;
 
         &:not(:last-child){
             margin-bottom: .75rem;

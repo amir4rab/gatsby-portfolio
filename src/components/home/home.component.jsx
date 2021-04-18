@@ -2,6 +2,8 @@ import React from 'react';
 import ThumbnailImageSlider from '../thumbnailImageSlider/thumbnailImageSlider.component';
 import * as classes from './home.module.scss';
 
+import Button from '../button/button.component';
+
 function Home() {
     return (
         <div className={ classes.main }>
@@ -16,8 +18,8 @@ function Home() {
                         </h2>
                     </div>
                     <div className={ classes.left_buttons }>
-                        <button>My projects</button>
-                        <button>About me</button>
+                        <Button btnType="whiteFull"> My projects </Button>
+                        <Button btnType="whiteEmpty"> about me </Button>
                     </div>
                 </div>
                 <div className={ classes.right }>

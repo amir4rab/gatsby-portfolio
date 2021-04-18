@@ -11,7 +11,7 @@ const ImgSliderIndicators = ({
     const mapToNum = (num) => {
         const res = [];
         for( let i = 0 ; i < num ; i++ ){
-            res.push(<div 
+            res.push(<button 
                 key={i} className={[ 'indicator', `${ activeIndex === i ? 'indicator_acitve' : '' }` ].join(' ')}
                 onClick={ _ => changeActiveIndexTo(i) }
                 />);
