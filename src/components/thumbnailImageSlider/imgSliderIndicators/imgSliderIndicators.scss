@@ -1,0 +1,33 @@
+.imgSliderIndicators{
+    margin-right: 1rem;
+    .indicator{
+        background: white;
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+        opacity: .5;
+        transition: opacity .1s ease-in-out;
+
+        &:not(:last-child){
+            margin-bottom: .75rem;
+        }
+
+        &:hover{
+            opacity: .65;
+            cursor: pointer;
+        }
+
+        &:active{
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &_acitve{
+            opacity: 1;
+            &:hover, &:active{
+                cursor: default;
+                opacity: 1;
+            }
+        }
+    }
+}

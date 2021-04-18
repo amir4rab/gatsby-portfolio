@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import * as classes from './thumbnailImageSlider.module.scss';
 
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import ImgSliderIndicators from './imgSliderIndicators/imgSliderIndicators.component';
+import ImgSliderSlider from './imgSliderSlider/imgSliderSlider.coponent';
 
 const ThumbnailImageSlider = () => {
-
     const queryRes = useStaticQuery(
         graphql`
             query heroImgGeter {
@@ -25,26 +25,18 @@ const ThumbnailImageSlider = () => {
         `
     );
 
-    // console.log(queryRes.allContentfulProject.edges);
-    // queryRes.allContentfulProject.edges.map( item => console.log( item.node.thumbnail ));
+    const [ activeIndex, setActiveIndex ] = useState(0);
 
     return (
         <div className={ classes.main }>
-            <div className={ classes.imgSlider }>
-                <div className={ classes.imgSlider_inner }>
-                    {
-                        queryRes.allContentfulProject.edges.map( 
-                            item => 
-                                <GatsbyImage 
-                                    className={ classes.gatsbyImage }
-                                    key={ item.node.slug } 
-                                    alt={ `image from ${item.node.title}` } 
-                                    image={ item.node.thumbnail.gatsbyImageData } 
-                                />
-                        ) 
-                    }
-                </div>
+            <div className={ classes.indicators }>
+                <ImgSliderIndicators 
+                    indicatorsAmount={ queryRes.allContentfulProject.edges.length } 
+                    activeIndex={ activeIndex } 
+                    changeActiveIndexTo={ setActiveIndex }
+                />
             </div>
+            <ImgSliderSlider imagesDataArr={queryRes.allContentfulProject.edges} />
         </div>
     );
 };
