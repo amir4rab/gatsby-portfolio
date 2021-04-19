@@ -53,7 +53,9 @@
                 }
             }
             &_buttons{
-
+                a:not(:last-child){
+                    margin-right: 1rem;
+                }
             }
         }
         .right{

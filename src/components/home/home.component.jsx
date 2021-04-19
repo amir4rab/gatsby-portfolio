@@ -1,7 +1,8 @@
 import React from 'react';
 import ThumbnailImageSlider from '../thumbnailImageSlider/thumbnailImageSlider.component';
-import * as classes from './home.module.scss';
+import { Link } from 'gatsby';
 
+import * as classes from './home.module.scss';
 import Button from '../button/button.component';
 
 function Home() {
@@ -18,8 +19,16 @@ function Home() {
                         </h2>
                     </div>
                     <div className={ classes.left_buttons }>
-                        <Button btnType="whiteFull"> My projects </Button>
-                        <Button btnType="whiteEmpty"> about me </Button>
+                        <Link to='/projects'>
+                            <Button btnType="whiteFull"> 
+                                My projects
+                            </Button>
+                        </Link> 
+                        <Link to='/about'>
+                            <Button btnType="whiteEmpty">
+                                about me
+                            </Button>
+                        </Link>
                     </div>
                 </div>
                 <div className={ classes.right }>
