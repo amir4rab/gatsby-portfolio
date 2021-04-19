@@ -1,0 +1,33 @@
+@import './../../scss/styles';
+
+.main{
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+
+    color: $white-0;
+    font-weight: 500;
+
+    .title{
+        color: inherit;
+        font-weight: inherit;
+
+        font-size: 1.75rem;
+        padding-bottom: 1rem;
+        text-transform: capitalize;
+    }
+    .subtitle{
+        color: inherit;
+        font-weight: inherit;
+
+        font-size: 1rem;
+
+        a{
+            color: $highlited-0;
+        }
+    }
+}
