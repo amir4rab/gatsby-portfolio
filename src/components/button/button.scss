@@ -4,29 +4,71 @@
 // $black-0
 
 .customStyledBtn{
-    box-sizing: border-box;
-    height: 2.5rem;
+    //** paddings **//
     padding: .5rem 1rem;
-    font-size: 1rem;
+
+    //** max height **//
+    height: 2.5rem;
+    
+    //** border settings **//
     border-radius: .8rem;
     border: none;
+    $border-width: .15rem;
+    
+    //** font settings **//
+    font-size: 1rem;
     font-weight: 500;
     text-transform: capitalize;
 
+    //** defult colors **//
     color: $black-0;
     background-color: $white-0;
 
+    //** reseting defult settings **//
     outline: none;
+
+    //** disabling hover for disabled buttons **//
     &:hover:not(:disabled){
         cursor: pointer;
     }
+
+    //** transitons ammount **//
+    $btnTransitions: background-color .1s ease-in-out,
+                color .1s ease-in-out;
+    $hoverTransitionAmmount: 10;
+    $activeTransitionAmmount: 20;
+    $disabledTransitionAmmount: 25;
+
+    
+    //** custom colors classes **//
     &.whiteFull{
         color: $black-0;
         background-color: $white-0;
+        transition: $btnTransitions;
+        &:hover{
+            background-color: darken( $white-0, $hoverTransitionAmmount );
+        }
+        &:active{
+            background-color: darken( $white-0, $activeTransitionAmmount );
+        }
+        &:disabled{
+            background-color: darken( $white-0, $disabledTransitionAmmount );
+            color: lighten( $black-0, $disabledTransitionAmmount );
+        }
     }
     &.whiteEmpty{
-        color: $white-0;
         background-color: transparent;
-        border: .2rem solid $white-0;
+        color: $white-0;
+        border: $border-width solid $white-0;
+        &:hover{
+            border-color: darken( $white-0, $hoverTransitionAmmount );
+        }
+        &:active{
+            border-color: darken( $white-0, $activeTransitionAmmount );
+        }
+        &:disabled{
+            border-color: darken( $white-0, $disabledTransitionAmmount );
+            color: darken( $white-0, $disabledTransitionAmmount );
+        }
     }
 }

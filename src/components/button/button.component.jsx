@@ -4,8 +4,8 @@ import './button.scss';
 
 const Button = ({
     children,
-    btnType,
-    disabled
+    btnType = '',
+    disabled = false,
 }) => {
     return (
         <button disabled={disabled} className={ [`customStyledBtn` , btnType ].join(' ')}>
