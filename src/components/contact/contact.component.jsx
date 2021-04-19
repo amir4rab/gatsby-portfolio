@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Projects() {
+const Contact = () => {
     return (
         <div>
             
         </div>
-    )
-}
+    );
+};
 
-export default Projects
+export default Contact;
