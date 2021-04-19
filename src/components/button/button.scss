@@ -26,6 +26,10 @@
 
     //** reseting defult settings **//
     outline: none;
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
 
     //** disabling hover for disabled buttons **//
     &:hover:not(:disabled){
@@ -38,7 +42,6 @@
     $hoverTransitionAmmount: 10;
     $activeTransitionAmmount: 20;
     $disabledTransitionAmmount: 25;
-
     
     //** custom colors classes **//
     &.whiteFull{
