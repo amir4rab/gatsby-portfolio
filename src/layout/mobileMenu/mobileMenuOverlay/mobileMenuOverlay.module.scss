@@ -1,0 +1,39 @@
+@import '../../../scss/styles';
+
+
+.overlay{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(36, 36, 36, 0.7);
+    backdrop-filter: blur(1rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inner{
+        width: 80vw;
+        height: 40vh;
+        background: $black-0;
+        .ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            height: 100%;
+            padding: 2rem 2rem;
+            list-style-type: none;
+            .li{
+                a{
+                    color: $white-0;
+                    text-decoration: none;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
