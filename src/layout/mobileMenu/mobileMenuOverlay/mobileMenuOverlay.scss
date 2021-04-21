@@ -1,0 +1,39 @@
+@import '../../../scss/styles';
+
+// @keyframes animateIn {
+//     0%{
+//         background-color: transparent;
+//         backdrop-filter: blur(0);
+//     }
+//     50%{
+//         background-color: rgba(36, 36, 36, 0.7);
+//     }
+//     100%{
+//         background-color: rgba(36, 36, 36, 0.7);
+//         backdrop-filter: blur(1rem);
+//     }
+// }
+
+.overlay-mobileMenu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    // transition: background-color .5s ease-in-out,
+    //             backdrop-filter .5s ease-in-out;
+    
+                
+    background-color: rgba(36, 36, 36, 0.7);
+    backdrop-filter: blur(1rem);
+
+    // &.animateOut{
+    //     background-color: transparent;
+    //     backdrop-filter: blur(0);
+    // }
+
+    // .inner{
+    //     width: 50%;
+    //     height: 50%;
+    //     background: $black-0;
+    // }
+}

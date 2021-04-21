@@ -29,13 +29,11 @@ const ThumbnailImageSlider = () => {
 
     return (
         <div className={ classes.main }>
-            <div className={ classes.indicators }>
-                <ImgSliderIndicators 
-                    indicatorsAmount={ queryRes.allContentfulProject.edges.length } 
-                    activeIndex={ activeIndex } 
-                    changeActiveIndexTo={ setActiveIndex }
-                />
-            </div>
+            <ImgSliderIndicators 
+                indicatorsAmount={ queryRes.allContentfulProject.edges.length } 
+                activeIndex={ activeIndex } 
+                changeActiveIndexTo={ setActiveIndex }
+            />
             <ImgSliderSlider
                 imagesDataArr={queryRes.allContentfulProject.edges}
                 activeIndex={ activeIndex }

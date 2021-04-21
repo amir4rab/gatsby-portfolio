@@ -1,7 +1,7 @@
 @import '../../scss/styles';
 
 .navbar{
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -16,6 +16,7 @@
         }
     }
     .links{
+        // display: flex;
         &_Ul{
             list-style-type: none;
             :not(:last-child){
@@ -36,5 +37,11 @@
                 }
             }
         }
+    }
+}
+
+@include for-desktop-up {
+    .navbar{
+        display: flex;
     }
 }

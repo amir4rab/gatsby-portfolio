@@ -1,0 +1,29 @@
+@keyframes animateOpacityComponentAnimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.animate-opacity-component {
+    $animationDuration: .3s;
+    .item {
+        opacity: 0;
+        &.entering{
+            display: block;
+            animation: animateOpacityComponentAnimation $animationDuration ease forwards;
+        }
+        &.exiting{
+            animation: animateOpacityComponentAnimation $animationDuration ease reverse forwards;
+        }
+        &.showing{
+            opacity: 1;
+            display: block;
+        }
+        &.notShowing{
+            display: none;
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../../scss/styles';
+
+.button{
+
+    background-color: $black-1;
+    border-radius: 50%;
+    border: none;
+    padding: .5rem;
+    outline: none;
+    
+    transition: background-color .1s ease-in-out;
+
+    position: absolute;
+    bottom: 5vh;
+    right: 5vh;
+
+    &:active{
+        background-color: lighten( $black-1 , 10 );
+    }
+
+    .img{
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: transform .3s ease-in-out;
+    }
+
+}
