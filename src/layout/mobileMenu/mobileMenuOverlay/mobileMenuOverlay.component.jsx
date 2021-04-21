@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './mobileMenuOverlay.scss';
 
 const MobileMenuOverlay = ({ closeOverlay }) => {
@@ -12,7 +12,11 @@ const MobileMenuOverlay = ({ closeOverlay }) => {
         <div 
             className={ `overlay-mobileMenu` }
             onClick={ closeOverlayFn }
+            onKeyDown={ e => console.log(e) }
             id="mobileMenuOverlay"
+            role="button"
+            aria-label="button"
+            tabIndex="0"
             >
             <div className={ 'inner' }>
 

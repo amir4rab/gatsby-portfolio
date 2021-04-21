@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 
 import * as classes from './navbarTop.module.scss';
 
+console.log(classes);
+
 const NavbarTop = () => {
     return (
         <nav className={ classes.navbar }>
@@ -12,7 +14,7 @@ const NavbarTop = () => {
                 </h3>
             </div>
             <div className={ classes.links }>
-                <ul className={ classes.links_Ul }>
+                <ul className={ classes.ul }>
                     <li className={ classes.li }>
                         <Link to="/" activeClassName={ classes.activeLink }>
                             Home
