@@ -8,10 +8,17 @@
     align-content: center;
     justify-content: flex-start;
 
+    // overflow-y: scroll;
+    overflow-x: scroll;
+
     div {
         margin-top: .5rem;
         &:not(:last-child) {
             margin-right: 1rem;
         }
+    }
+
+    @include for-desktop-up{
+        overflow-x: hidden;
     }
 }
