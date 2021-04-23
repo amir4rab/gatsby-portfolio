@@ -1,0 +1,30 @@
+@import './../../../../scss/styles';
+
+.inputBox{
+    .input {
+        display: none;
+    }
+    .label {
+        display: block;
+        user-select: none;
+
+        
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        
+        color: $white-0;
+        background-color: $black-1;
+        
+        transition: color .3s ease-in-out,
+        background-color .3s ease-in-out;
+
+        &:hover{
+            cursor: pointer;
+            background: lighten( $black-1 , 10 );
+        }
+    }
+    .input:checked ~ .label {
+        background-color: $highlited-0;
+        color: $black-1;
+    }
+}

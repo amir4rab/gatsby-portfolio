@@ -1,0 +1,17 @@
+@import './../../../scss/styles';
+
+.list {
+    padding: 1rem 1rem;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+
+    div {
+        margin-top: .5rem;
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}

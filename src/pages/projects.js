@@ -1,11 +1,12 @@
 import React from 'react';
-import Projects from '../components/projects/projects.component';
+import SpecialProjects from '../components/speacialProjects/specialProjects.component';
 import Layout from '../layout/layout';
 
-const ProjectsPage = () => {
+const ProjectsPage = (props) => {
+
     return (
-        <Layout>
-            <Projects />
+        <Layout contextProps={props}>
+            <SpecialProjects />
         </Layout>
     );
 };

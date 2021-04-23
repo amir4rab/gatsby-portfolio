@@ -6,13 +6,17 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 
 import './layout.scss';
+import PathContext from '../utilities/contexts/pathContext/pathContext';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, contextProps }) => {
+
     return (
         <main>
-            <NavbarTop />
-            { children }
-            <MobileMenu />
+            <PathContext.Provider value={contextProps} >
+                <NavbarTop />
+                    { children }
+                <MobileMenu />
+            </PathContext.Provider>
         </main>
     );
 };
