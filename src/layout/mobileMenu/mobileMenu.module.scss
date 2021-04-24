@@ -1,0 +1,7 @@
+@import './../../scss/styles';
+
+@include for-desktop-up{
+    .mobileMenu{
+        display: none;
+    }
+}

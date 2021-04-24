@@ -15,8 +15,16 @@ const AllProjects = () => {
                         thumbnail {
                             gatsbyImageData
                         }
+                        hero{
+                            gatsbyImageData
+                            fixed {
+                                src
+                                height
+                            }
+                        }
                         stack
                         specialProject
+                        url
                     }
                 }
             }

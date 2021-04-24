@@ -10,8 +10,16 @@ function SpecialProjects() {
                     nodes {
                         title
                         slug
+                        url
                         thumbnail {
                             gatsbyImageData
+                        }
+                        hero {
+                            gatsbyImageData
+                            fixed {
+                                src
+                                height
+                            }
                         }
                         stack
                         specialProject
