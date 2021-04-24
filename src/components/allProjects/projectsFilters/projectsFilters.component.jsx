@@ -13,13 +13,14 @@ const ProjectsFilters = ({ filters, activeFilters, setActiveFilters }) => {
     }
 
     return (
-        <div className={ classes.filtersList }
-        >
-            {
-                filters.map(
-                    filter => <ProjectFilter changeFilterState={changeFilterState} isActive={activeFilters.includes(filter)} filterName={filter} key={filter} />
-                )
-            }
+        <div className={ classes.filtersList }>
+            <div className={ classes.inner }>
+                {
+                    filters.map(
+                        filter => <ProjectFilter changeFilterState={changeFilterState} isActive={activeFilters.includes(filter)} filterName={filter} key={filter} />
+                    )
+                }
+            </div>
         </div>
     );
 };

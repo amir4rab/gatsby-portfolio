@@ -25,11 +25,11 @@
         font-weight: 500;
     }
     .stacks{
-        // display: none;
         .subTitle{
             font-weight: 500;
             font-size: 1.25rem;
             padding-bottom: .5rem;
+            text-transform: capitalize;
         }
         .stack{
             opacity: .5;
@@ -48,6 +48,42 @@
         }
         .linkToMore{
             color: $highlited-0;
+            text-transform: capitalize;
+        }
+    }
+}
+
+@include for-desktop-up{
+    .projectDisplay{
+        .image{
+            width: 100%;
+            height: 25vh;
+        }
+        .title{
+            padding: 1.25rem 0;
+            font-size: 2.25rem;
+        }
+        .stacks{
+            .subTitle{
+                font-size: 1.5rem;
+                padding-bottom: 1rem;
+            }
+            .stack{
+                opacity: .5;
+                &:not(:last-child){
+                    padding-bottom: .5rem;
+                }
+            }
+        }
+        .links{
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            a:not(:last-child){
+                margin-bottom: 0rem;
+            }
         }
     }
 }

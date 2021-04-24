@@ -3,28 +3,36 @@
 .main{
     display: block;
     .indicators{
+        padding: 2vh 10vw 0 10vw;
         &_title {
-            display: flex;
-            align-items: center;
-            align-content: center;
-            justify-content: space-between;
+            display: block;
 
-            padding: 5vh 10vw 0 10vw;
 
             h2 {
                 color: $white-0;
                 font-weight: 500;
                 text-transform: capitalize;
+                padding-bottom: 1rem;
             }
             a {
                 color: $highlited-0;
             }
         }
         &_indicators{
-
+            overflow: hidden;
         }
     }
-    .project{
-        // background: rgba(218, 71, 71, 0.452);
+}
+
+@include for-desktop-up{
+    .main{
+        .indicators{
+            &_title {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: space-between;
+            }
+        }
     }
 }

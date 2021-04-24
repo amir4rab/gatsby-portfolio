@@ -1,21 +1,28 @@
 @import '../../../scss/styles';
 
 .filtersList{
-    display: flex;
     flex-wrap: nowrap;
-    overflow-y: scroll;
-
-    padding: 1rem 1rem;
-
-    div{
-        margin-top: .5rem;
-        
-        &:not(:last-child){
-            margin-right: .5rem;
+    
+    padding: 1rem 10vw;
+    
+    .inner{
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: scroll;
+        div{
+            margin-top: .5rem;
+            
+            &:not(:last-child){
+                margin-right: .5rem;
+            }
         }
     }
     @include for-desktop-up{
-        flex-wrap: wrap;
-        overflow-y: hidden;
+        .inner{
+            flex-wrap: wrap;
+            overflow-y: hidden;
+        }
     }
 }
