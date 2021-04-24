@@ -17,9 +17,8 @@ const AllProjects = () => {
                         }
                         hero{
                             gatsbyImageData
-                            fixed {
+                            fixed(quality: 50, width: 1080) {
                                 src
-                                height
                             }
                         }
                         stack
