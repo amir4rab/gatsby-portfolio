@@ -16,9 +16,8 @@ function SpecialProjects() {
                         }
                         hero {
                             gatsbyImageData
-                            fixed {
+                            fixed(quality: 75, width: 1920) {
                                 src
-                                height
                             }
                         }
                         stack

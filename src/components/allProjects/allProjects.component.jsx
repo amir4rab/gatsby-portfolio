@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import ProjectsDisplayer from '../projectsDisplayer/projectsDisplayer.component';
@@ -17,7 +17,7 @@ const AllProjects = () => {
                         }
                         hero{
                             gatsbyImageData
-                            fixed(quality: 50, width: 1080) {
+                            fixed(quality: 75, width: 1920) {
                                 src
                             }
                         }
@@ -44,7 +44,7 @@ const AllProjects = () => {
 
     const [ activeFilters, setActiveFilters ] = useState([]);
 
-    const makeFilterdProjects = () => {
+    const makeFilterdProjects = useCallback(() => {
         const resArr = [];
 
         
@@ -67,13 +67,13 @@ const AllProjects = () => {
             })
         }
         return resArr;
-    }
+    }, [ activeFilters, qeuryRes.allContentfulProject.nodes ]);
 
     const [ filterdProjects , setFilterdProjects ] = useState(makeFilterdProjects());
 
     useEffect(() => {
         setFilterdProjects(makeFilterdProjects());
-    }, [activeFilters]);
+    }, [ activeFilters, makeFilterdProjects ]);
 
     return (
         <div>
