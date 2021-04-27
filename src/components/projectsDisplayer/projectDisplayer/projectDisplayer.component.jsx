@@ -36,7 +36,7 @@ const ProjectDisplayer = ({ project }) => {
                                 Live version
                             </Button>
                         </a>
-                        <Link className={ classes.linkToMore } to={`projects/${project.slug}`}>
+                        <Link className={ classes.linkToMore } to={`/projects/${project.slug}`}>
                                 learn more about this project
                         </Link>
                     </div>

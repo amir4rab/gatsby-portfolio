@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import Button from './../../components/button/button.component';
 import ProjectsDisplayer from '../projectsDisplayer/projectsDisplayer.component';
 import ProjectsFilters from './projectsFilters/projectsFilters.component';
+import * as classes from './allProjects.module.scss';
 
 const AllProjects = () => {
     const qeuryRes = useStaticQuery(
@@ -75,9 +77,29 @@ const AllProjects = () => {
         setFilterdProjects(makeFilterdProjects());
     }, [ activeFilters, makeFilterdProjects ]);
 
+    const [ showFilteres, setShowFilteres] = useState(false);
+    
+    // const testFn = () => console.log('testFn');
     return (
-        <div>
-            <ProjectsFilters filters={filters} setActiveFilters={setActiveFilters} activeFilters={activeFilters}/>
+        <div className={ classes.allProjects }>
+            <div  className={ classes.filters }>
+                <Button btnType='blackHighlighted' onClick={ _ => setShowFilteres(!showFilteres) }>
+                    {
+                        showFilteres === true ?
+                        <p>Hide filters</p>
+                        :
+                        <p>Show filters</p>
+                    }
+                </Button>
+                {
+                    showFilteres === true ?
+                    <div>
+                        <ProjectsFilters filters={filters} setActiveFilters={setActiveFilters} activeFilters={activeFilters}/>
+                    </div>
+                    :
+                    null
+                }
+            </div>
             <ProjectsDisplayer projects={filterdProjects} />
         </div>
     );
