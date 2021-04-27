@@ -35,7 +35,7 @@
             width: 100%;
             height: 120%;
             
-            background: $highlited-0;
+            background: $highlighted-0;
             transition: top .5s cubic-bezier(.68,-0.55,.27,1.55);
         }
 
@@ -53,7 +53,7 @@
             top: 0%;
         }
         &:hover::before{
-            background: darken( $highlited-0 , 10 );
+            background: darken( $highlighted-0 , 10 );
         }
     }
 }

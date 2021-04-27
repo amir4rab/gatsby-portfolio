@@ -30,10 +30,10 @@
                 color: inherit;
                 text-decoration: none;
                 &:hover{
-                    color: lighten( $highlited-0, 25 );
+                    color: lighten( $highlighted-0, 25 );
                 }
                 &.activeLink{
-                    color: $highlited-0;
+                    color: $highlighted-0;
                 }
             }
         }

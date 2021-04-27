@@ -75,7 +75,7 @@
         }
     }
     &.blackHighlighted{
-        color: $highlited-0;
+        color: $highlighted-0;
         background-color: $black-1;
         transition: $btnTransitions;
         &:hover{
@@ -86,7 +86,7 @@
         }
         &:disabled{
             background-color: darken( $black-1, $disabledTransitionAmmount );
-            color: lighten( $highlited-0, $disabledTransitionAmmount );
+            color: lighten( $highlighted-0, $disabledTransitionAmmount );
         }
     }
 }
