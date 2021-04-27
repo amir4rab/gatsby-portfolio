@@ -7,6 +7,7 @@ module.exports = {
     title: "gatsby portfolio",
   },
   plugins: [
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-contentful",
       options: {

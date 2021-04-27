@@ -1,0 +1,86 @@
+@import '../../scss/styles';
+
+.projectTemplateStyles{
+    color: $white-0;
+    $default-padding: 1rem 5vh; 
+
+    .hero{
+        position: relative;
+        height: 35vh;
+        .gobackBtn{
+            position: absolute;
+            top: 1vh;
+            left: 1vh;
+            z-index: 1000;
+        }
+        .heroImg{
+            width: 100%;
+            min-height: 100%;
+        }
+    }
+    .titleContent{
+        padding: $default-padding;
+        .title{
+            font-weight: 500;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            padding: 1rem 0;
+        }
+        .link{
+            color: $highlited-0;
+            text-transform: capitalize;
+        }
+    }
+    .htmlContent{
+        padding: $default-padding;
+        h3{
+            font-weight: 500;
+            padding: 1rem 0;
+            font-size: 1.25rem;
+        }
+        ul{
+            list-style: none;
+            padding-left: 1rem;
+            li{
+                padding: .5rem 0;
+                a{
+                    color: $highlited-0;
+                }
+            }
+        }
+    }
+    .stackContent{
+        padding: $default-padding;
+        .stackTitle{
+            font-size: 1.25rem;
+            padding: 1rem 0;
+        }
+        .stackList{
+            list-style: none;
+            padding-left: 1rem;
+            .stackItem{
+                padding: .5rem 0;
+            }
+        }
+    }
+}
+
+@include for-desktop-up{
+    .projectTemplateStyles{
+        $default-padding: 1rem 10vh; 
+    
+        .titleContent{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            .title{
+                font-size: 1.75rem;
+                padding: 0;
+            }
+        }
+        .htmlContent, .stackContent, .titleContent{
+            padding: $default-padding;
+        }
+    }
+}
