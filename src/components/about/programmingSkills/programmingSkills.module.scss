@@ -1,0 +1,72 @@
+@import '../../../scss/styles';
+
+.ProgrammingSkills{
+    .title{
+        font-weight: 500;
+        font-size: 1.25rem;
+        padding-bottom: .5rem;
+        color: $highlighted-0;
+    }
+    .list{
+        list-style-type: none;
+        padding-left: 1rem;
+        .listItem{
+            padding: 1rem 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: center;
+            flex-direction: row-reverse;
+            .itemTitle{
+                font-weight: 500;
+                padding-left: 1.5rem;
+                text-transform: capitalize;
+            }
+            .itemImage{
+                max-width: 2rem;
+                max-height: 2rem;
+            }
+        }
+    }
+}
+@include for-desktop-up{
+    .ProgrammingSkills{
+        .title{
+            font-size: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .list{
+            .listItem{
+                padding: 1rem 0;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                align-content: center;
+                flex-direction: row-reverse;
+                .itemTitle{
+                    font-weight: 500;
+                    padding-left: 1.5rem;
+                    text-transform: capitalize;
+                }
+                .itemImage{
+                    max-width: 2rem;
+                    max-height: 2rem;
+                }
+            }
+        }
+    }
+    // .contentBox{
+    //     padding: 2rem 0;
+    //     .boxTitle{
+    //         font-weight: 500;
+    //         font-size: 1.5rem;
+    //         padding-bottom: 1.5rem;
+    //     }
+    //     .boxContent{
+    //         padding: 1rem 0 !important;
+    //     }
+    //     .boxList .listItem{
+    //         margin: 1rem 0 !important;
+    //     }
+    // }
+}

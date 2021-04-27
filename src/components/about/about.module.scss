@@ -1,0 +1,61 @@
+@import './../../scss/styles';
+
+.aboutComponent{
+    color: $white-0;
+    padding: 10vw 10vw;
+
+    .title{
+        font-weight: 500;
+        font-size: 1.75rem;
+        padding-bottom: 1rem;
+    }
+    .pageContent{
+        .contentBox{
+            padding: 1rem 0;
+            .boxTitle{
+                font-weight: 500;
+                color: $highlighted-0;
+                font-size: 1.25rem;
+                padding-bottom: 1rem;
+            }
+            .boxContent{
+                padding: .5rem 0;
+            }
+            .boxList{
+                list-style-type: none;
+                padding-left: 1rem;
+                .listItem{
+                    margin: .5rem 0;
+                }
+            }
+        }
+    }
+    @include for-desktop-up{
+        padding: 1rem 10vw;
+    
+        .title{
+            font-size: 2.25rem;
+            padding-bottom: 2rem;
+        }
+        .pageContent{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            align-items: flex-start;
+        }
+        .contentBox{
+            padding: 2rem 0;
+            .boxTitle{
+                font-weight: 500;
+                font-size: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            .boxContent{
+                padding: 1rem 0 !important;
+            }
+            .boxList .listItem{
+                margin: 1rem 0 !important;
+            }
+        }
+    }
+}
