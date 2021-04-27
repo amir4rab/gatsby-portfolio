@@ -22,22 +22,22 @@ const MobileMenuOverlay = ({ closeOverlay }) => {
             <div className={ classes.inner }>
                 <ul className={ classes.ul }>
                     <li className={ classes.li }>
-                        <Link to="/">
+                        <Link activeClassName={ classes.activeLink } to="/">
                             Home
                         </Link>
                     </li>
                     <li className={ classes.li }>
-                        <Link to="/projects">
+                        <Link activeClassName={ classes.activeLink } to="/projects">
                             Projects
                         </Link>
                     </li>
                     <li className={ classes.li }>
-                        <Link to="/about">
+                        <Link activeClassName={ classes.activeLink } to="/about">
                             About
                         </Link>
                     </li>
                     <li className={ classes.li }>
-                        <Link to="/contact">
+                        <Link activeClassName={ classes.activeLink } to="/contact">
                             Contact
                         </Link>
                     </li>

@@ -2,7 +2,7 @@
 
 
 .overlay{
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     width: 100%;
     height: 100%;
@@ -33,6 +33,9 @@
                     color: $white-0;
                     text-decoration: none;
                     font-size: 1rem;
+                }
+                .activeLink{
+                    color: $highlited-0;
                 }
             }
         }
