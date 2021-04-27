@@ -6,9 +6,10 @@ const Button = ({
     children,
     btnType = '',
     disabled = false,
+    onClick
 }) => {
     return (
-        <button disabled={disabled} className={ [`customStyledBtn` , btnType ].join(' ')}>
+        <button onClick={onClick} disabled={disabled} className={ [`customStyledBtn` , btnType ].join(' ')}>
             { children }
         </button>
     );
