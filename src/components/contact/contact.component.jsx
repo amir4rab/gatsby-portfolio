@@ -1,5 +1,5 @@
 import React from 'react';
-import NetlifyForm from '../about/netifyForm/netlifyForm.component';
+import NetlifyForm from './netifyForm/netlifyForm.component';
 
 import * as classes from './contact.module.scss';
 
