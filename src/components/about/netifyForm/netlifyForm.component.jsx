@@ -20,7 +20,7 @@ const NetlifyForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        fetch("/", {
+        fetch("https://amir4rab.netlify.app/contact", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encodeForNetlify({
