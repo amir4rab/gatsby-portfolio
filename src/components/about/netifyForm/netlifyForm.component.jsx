@@ -20,7 +20,7 @@ const NetlifyForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        fetch("https://amir4rab.netlify.app/contact", {
+        fetch("https://amir4rab.netlify.app", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encodeForNetlify({
@@ -45,7 +45,8 @@ const NetlifyForm = () => {
             <h3 className={ classes.subtitle }>
                 Contact From
             </h3>
-            <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
+            <form name="contact v0.1" method="post" data-netlify="true" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="name_of_my_form" />
                 <div className={ classes.inputGroup }>
                     <label>
                         <p>Your Name</p>
