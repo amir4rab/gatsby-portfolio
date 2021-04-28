@@ -24,9 +24,10 @@ const NetlifyForm = () => {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encodeForNetlify({
-                "form-name": nameInputRef.current.value,
-                "form-email": emailInputRef.current.value,
-                "form-message": nameInputRef.current.value,
+                "form-name": "contact v0.1",
+                "name": nameInputRef.current.value,
+                "email": emailInputRef.current.value,
+                "message": nameInputRef.current.value,
             })
         })
             .then( res => {
