@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Button from '../button/button.component';
+import NetlifyForm from '../about/netifyForm/netlifyForm.component';
 
 import * as classes from './contact.module.scss';
 
@@ -32,36 +31,7 @@ const Contact = () => {
                     </li>
                 </ul>
             </div>
-            <div className={ classes.contactform }>
-                <h3 className={ classes.subtitle }>
-                    Contact From
-                </h3>
-                <form name="contact" method="post" data-netlify="true">
-                    <p className={ classes.inputGroup }>
-                        <label>
-                            <p>Your Name</p>
-                            <input type="text" name="name"/>
-                        </label>
-                    </p>
-                    <p className={ classes.inputGroup }>
-                        <label>
-                            <p>Your Email</p>
-                            <input type="email" name="email"/>
-                        </label>
-                    </p>
-                    <p className={ classes.inputGroup }>
-                        <label>
-                            <p>Message</p>
-                            <textarea name="message"></textarea>
-                        </label>
-                    </p>
-                    <p className={ classes.inputGroup }>
-                        <Button type="submit">
-                            send
-                        </Button>
-                    </p>
-                </form>
-            </div>
+            <NetlifyForm />
         </div>
     );
 };
