@@ -11,6 +11,7 @@ const NetlifyForm = () => {
     const nameInputRef = useRef('');
     const emailInputRef = useRef('');
     const messageInputRef = useRef('');
+    const honeypot = useRef('');
 
     const encodeForNetlify = (data) => {
         return Object.keys(data)
@@ -28,6 +29,7 @@ const NetlifyForm = () => {
                 "name": nameInputRef.current.value,
                 "email": emailInputRef.current.value,
                 "message": nameInputRef.current.value,
+                "honeypot": honeypot.current.value,
             })
         })
             .then( res => {
@@ -47,13 +49,19 @@ const NetlifyForm = () => {
                 Contact From
             </h3>
             <form 
-                name="contact v0.1" 
+                name="contact v0.2" 
                 method="post" 
                 data-netlify="true" 
+                data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
-                data-netlify-recaptcha="true"
+                // data-netlify-recaptcha="true"
             >
-                {/* <input type="hidden" name="form-name" value="contact v0.1" /> */}
+                <input type="hidden" name="form-name" value="contact v0.2" />
+                <p hidden>
+                    <label>
+                        Don’t fill this out: <input name="bot-field" ref={honeypot} />
+                    </label>
+                </p>
                 <div className={ classes.inputGroup }>
                     <label>
                         <p>Your Name</p>
