@@ -24,7 +24,7 @@ const NetlifyForm = () => {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encodeForNetlify({
-                "form-name": "contact v0.1",
+                "form-name": event.target.getAttribute("name"),
                 "name": nameInputRef.current.value,
                 "email": emailInputRef.current.value,
                 "message": nameInputRef.current.value,
@@ -53,7 +53,7 @@ const NetlifyForm = () => {
                 onSubmit={handleSubmit}
                 data-netlify-recaptcha="true"
             >
-                <input type="hidden" name="form-name" value="contact v0.1" />
+                {/* <input type="hidden" name="form-name" value="contact v0.1" /> */}
                 <div className={ classes.inputGroup }>
                     <label>
                         <p>Your Name</p>
