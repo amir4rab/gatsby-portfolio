@@ -20,6 +20,10 @@ const NetlifyForm = () => {
         }));
     }
 
+    // const Ndate = new Date();
+
+    console.log(`newDate: `,new Date());
+
 
     //** managing inputs **//
 
@@ -42,6 +46,7 @@ const NetlifyForm = () => {
             "name": nameInputRef.current.value,
             "email": emailInputRef.current.value,
             "message": messageInputRef.current.value,
+            "date": null
         };
         
         if( honeypot.current.value !== '' ){
@@ -101,17 +106,22 @@ const NetlifyForm = () => {
                     }
                 </div>
                 <form 
-                    name="contact-v1.02" 
+                    name="contact-v1.10" 
                     method="post" 
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     // data-netlify-recaptcha="true"
                 >
-                    <input type="hidden" name="form-name" value="contact-v1.02" />
+                    <input type="hidden" name="form-name" value="contact-v1.10" />
                     <p hidden>
                         <label>
                             Don’t fill this out: <input name="bot-field" ref={honeypot} />
+                        </label>
+                    </p>
+                    <p hidden>
+                        <label>
+                            Date <input name="date" type="date" />
                         </label>
                     </p>
                     <div className={ `inputGroup` }>

@@ -3,8 +3,6 @@ import { Link } from 'gatsby';
 
 import * as classes from './navbarTop.module.scss';
 
-console.log(classes);
-
 const NavbarTop = () => {
     return (
         <nav className={ classes.navbar }>

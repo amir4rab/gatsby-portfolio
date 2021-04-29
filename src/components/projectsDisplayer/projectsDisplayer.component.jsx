@@ -15,8 +15,6 @@ const ProjectsDisplayer = ({ projects }) => {
         setActiveIndexState(indexNum);
     }
 
-    console.log(pathContext);
-
     return (
         <div className={ classes.main }>
             <div className={ classes.indicators }>

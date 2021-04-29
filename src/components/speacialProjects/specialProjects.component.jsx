@@ -29,8 +29,7 @@ function SpecialProjects() {
     );
 
     const [ specialProjectsArr ] = useState([...qeuryRes.allContentfulProject.nodes]);
-
-    console.log(specialProjectsArr);
+    
     return (
         <div>
             <ProjectsDisplayer projects={specialProjectsArr} />

@@ -6,7 +6,6 @@ import Button from '../../button/button.component';
 import * as classes from './projectDisplayer.module.scss';
 
 const ProjectDisplayer = ({ project }) => {
-    console.log(project);
 
     return (
         <div>

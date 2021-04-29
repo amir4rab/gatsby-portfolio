@@ -79,7 +79,6 @@ const AllProjects = () => {
 
     const [ showFilteres, setShowFilteres] = useState(false);
     
-    // const testFn = () => console.log('testFn');
     return (
         <div className={ classes.allProjects }>
             <div  className={ classes.filters }>

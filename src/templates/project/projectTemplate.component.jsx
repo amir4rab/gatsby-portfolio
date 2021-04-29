@@ -10,8 +10,6 @@ import BackButton from '../../components/button/backButton/backButton.component'
 
 const ProjectTemplate = ({ data }) => {
 
-    console.log(data);
-
     return (
         <Layout>
             <div
