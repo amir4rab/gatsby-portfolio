@@ -42,7 +42,7 @@ const NetlifyForm = () => {
             "name": nameInputRef.current.value,
             "email": emailInputRef.current.value,
             "message": messageInputRef.current.value,
-            "honypot": null
+            "honypot": honeypot.current.value
         };
         
         if( honeypot.current.value !== '' ){
@@ -102,14 +102,14 @@ const NetlifyForm = () => {
                     }
                 </div>
                 <form 
-                    name="contact v1" 
+                    name="contact-v1.01" 
                     method="post" 
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     // data-netlify-recaptcha="true"
                 >
-                    <input type="hidden" name="form-name" value="contact v1" />
+                    <input type="hidden" name="form-name" value="contact-v1.01" />
                     <p hidden>
                         <label>
                             Don’t fill this out: <input name="bot-field" ref={honeypot} />
