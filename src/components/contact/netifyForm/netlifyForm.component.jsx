@@ -41,13 +41,16 @@ const NetlifyForm = () => {
             "form-name": event.target.getAttribute("name"),
             "name": nameInputRef.current.value,
             "email": emailInputRef.current.value,
-            "message": nameInputRef.current.value,
+            "message": messageInputRef.current.value,
+            "honypot": null
         };
         
         if( honeypot.current.value !== '' ){
             formObj["honeypot"] = honeypot.current.value;
         } 
-
+        
+        console.log(formObj);
+        console.log(encodeForNetlify({ formObj }));
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -65,7 +68,6 @@ const NetlifyForm = () => {
                 setFormStateFn('netlifyRes', false);
                 console.error(error);
             });
-        console.log(nameInputRef.current.value);
     };
 
     return (
