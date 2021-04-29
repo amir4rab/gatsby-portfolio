@@ -1,0 +1,36 @@
+@import './../../../scss/styles';
+
+.backButtonComponent{
+    background: transparent;
+    border: none;
+    color: $white-0;
+    p{
+        display: inline;
+        a{
+            color: $white-0;
+        }
+    }
+    .backInd{
+        margin-right: .25rem;
+    }
+}
+
+@include for-desktop-up {
+    .backButtonComponent{
+        font-size: 1.25rem;
+        &:hover{
+            cursor: pointer;
+            color: lighten( $highlighted-0 , 25 );
+        }
+        p{
+            display: inline;
+            a{
+                color: $white-0;
+            }
+        }
+        .backInd{
+            margin-right: .25rem;
+            // display: none;
+        }
+    }
+}

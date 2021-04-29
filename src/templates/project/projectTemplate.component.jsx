@@ -5,6 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import * as classes from './projectTemplate.module.scss';
 
 import Layout from './../../layout/layout';
+import BackButton from '../../components/button/backButton/backButton.component';
 
 
 const ProjectTemplate = ({ data }) => {
@@ -19,7 +20,9 @@ const ProjectTemplate = ({ data }) => {
                 <div className={ classes.hero }>
                     <div className={ classes.gobackBtn }>
                         <Link to="/projects/">
-                            go back
+                            <BackButton>
+                                Go back
+                            </BackButton>
                         </Link>
                     </div>
                     <GatsbyImage 
