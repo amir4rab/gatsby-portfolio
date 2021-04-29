@@ -76,35 +76,38 @@ const NetlifyForm = () => {
             <div 
                 className={[ 
                     `formWrapper`, 
-                    formState.netlifyRes === false ? 'formFaild' : null,
-                    formState.netlifyRes === true ? 'formSuccessful' : null,
+                    formState.netlifyRes !== null ? 'formDone' : null,
                 ].join(' ')}
             >
-                <div 
-                    className={`successful`}
-                >
-                    your message has been reserved
-                </div>
-                <div className={ `error` }>
-                    <p>
-                        something went wrong,
-                    </p>
-                    <p>
-                        you can contact me on this email address
-                    </p>
-                    <p>
-                        contact@amir4rab.com
-                    </p>
+                <div className={`netlifyRes`}>
+                    {
+                        formState.netlifyRes === true ? 
+                        <div className={`successful`}>
+                            your message has been reserved
+                        </div>
+                        : null
+                    }
+                    {
+                        formState.netlifyRes === false ? 
+                        <div className={ `error` }>
+                            <p>
+                                something went wrong,
+                                you can contact me on this email address
+                                <b> contact@amir4rab.com</b>
+                            </p>
+                        </div>
+                        : null
+                    }
                 </div>
                 <form 
-                    name="contact v0.2" 
+                    name="contact v1" 
                     method="post" 
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     // data-netlify-recaptcha="true"
                 >
-                    <input type="hidden" name="form-name" value="contact v0.2" />
+                    <input type="hidden" name="form-name" value="contact v1" />
                     <p hidden>
                         <label>
                             Don’t fill this out: <input name="bot-field" ref={honeypot} />
