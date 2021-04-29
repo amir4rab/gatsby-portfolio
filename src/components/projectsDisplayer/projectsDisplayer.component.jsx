@@ -48,7 +48,7 @@ const ProjectsDisplayer = ({ projects }) => {
                     <ProjectsIndicators activeIndexState={activeIndexState} changeHanler={ changeHanler } data={ projects } />
                 </div>
             </div>
-            <div className={ classes.project }>
+            <div>
                 <ProjectDisplayer project={projects[activeIndexState]} />
             </div>
         </div>
