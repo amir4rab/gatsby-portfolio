@@ -15,17 +15,17 @@ const Contact = () => {
                 </h3>
                 <ul className={ classes.socialsLinks }>
                     <li>
-                        <a href="https://github.com/amir4rab">
+                        <a href="https://github.com/amir4rab" target="_">
                             github
                         </a>
                     </li>
                     <li>
-                        <a href="https://codepen.io/amir4rab">
+                        <a href="https://codepen.io/amir4rab" target="_">
                             code pen
                         </a>
                     </li>
                     <li>
-                        <a href="https://dribbble.com/amir4rab">
+                        <a href="https://dribbble.com/amir4rab" target="_">
                             dribbble
                         </a>
                     </li>
