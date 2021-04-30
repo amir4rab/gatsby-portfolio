@@ -8,8 +8,6 @@ const NetlifyForm = () => {
 
     //** states for form styles **//
     const [ formState , setFormState ] = useState({
-        show: false,
-        formDone: false,
         netlifyRes: null
     });
 
@@ -19,11 +17,6 @@ const NetlifyForm = () => {
             [ formSubItem ]: newState
         }));
     }
-
-    // const Ndate = new Date();
-
-    console.log(`newDate: `,new Date());
-
 
     //** managing inputs **//
 
@@ -46,7 +39,7 @@ const NetlifyForm = () => {
             "name": nameInputRef.current.value,
             "email": emailInputRef.current.value,
             "message": messageInputRef.current.value,
-            "date": null
+            "date": new Date()
         };
         
         if( honeypot.current.value !== '' ){
@@ -54,23 +47,18 @@ const NetlifyForm = () => {
         } 
         
         console.log(formObj);
-        console.log(encodeForNetlify({ formObj }));
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encodeForNetlify(formObj)
         })
             .then( res => {
-                // navigate("/thank-you/");
-                console.log('succes!')
-                console.log(res);
                 res.ok ? 
                     setFormStateFn('netlifyRes', true):
                     setFormStateFn('netlifyRes', false);
             })
-            .catch(error => {
+            .catch( _ => {
                 setFormStateFn('netlifyRes', false);
-                console.error(error);
             });
     };
 
@@ -111,7 +99,7 @@ const NetlifyForm = () => {
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
-                    // data-netlify-recaptcha="true"
+                    data-netlify-recaptcha="true"
                 >
                     <input type="hidden" name="form-name" value="contact-v1.10" />
                     <p hidden>
