@@ -5,6 +5,8 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: "gatsby portfolio",
+    siteUrl: `https://www.amir4rab.com`,
+    description: `A front-end Developer`,
   },
   plugins: [
     `gatsby-transformer-remark`,
@@ -21,6 +23,12 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
+        name: `Amir Arab`,
+        short_name: `Amir4rab`,
+        start_url: `/`,
+        background_color: `#0B0B0B`,
+        theme_color: `#56F2C3`,
+        display: `standalone`,
       },
     },
     "gatsby-plugin-sharp",
