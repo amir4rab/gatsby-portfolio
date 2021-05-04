@@ -99,9 +99,9 @@ const NetlifyForm = () => {
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
-                    data-netlify-recaptcha="true"
+                    // data-netlify-recaptcha="true"
                 >
-                    <input type="hidden" name="form-name" value="contact-v1.10" />
+                    <input type="hidden" name="form-name" value="contact-v1.11" />
                     <p hidden>
                         <label>
                             Don’t fill this out: <input name="bot-field" ref={honeypot} />
