@@ -94,7 +94,7 @@ const NetlifyForm = () => {
                     }
                 </div>
                 <form 
-                    name="contact-v1.10" 
+                    name="contact-v1.11" 
                     method="post" 
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field"
